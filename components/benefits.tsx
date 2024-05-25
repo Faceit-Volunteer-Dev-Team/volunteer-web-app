@@ -61,7 +61,7 @@ function Benefits() {
         </div>
 
         {/* BENEFITS */}
-        <div className="mt-5 items-center justify-between gap-8 md:flex">
+        <div className="mt-5 items-center text-sm justify-between gap-8 md:flex">
           {benefits.map((benefit: BenefitProps) => (
             <Benefit
               key={benefit.title}
@@ -89,9 +89,9 @@ function Benefits() {
             </div>
 
             {/* DESCRIPTION */}
-            <p className="my-5 text-white ">
+            <p className="my-5 text-md text-white ">
               Getting assistance on their live matches, a professional volunteer
-              team We care about each and every member.
+              team!
             </p>
 
             {/* BUTTON */}

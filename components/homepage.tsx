@@ -1,14 +1,10 @@
 import { Button } from "./shared/button";
-import { Hero, HeroTitle, HeroSubtitle } from "./shared/hero";
-import { Logo } from "./icons/logo";
+import { Hero } from "./shared/hero";
 
 export const HomepageHero = () => (
   <Hero>
     <div className="relative flex flex-col md:flex-row md:justify-between md:items-start">
       <div className="md:w-1/2">
-        <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
-          <Logo />
-        </div>
         <div>
           <p className="mt-8 text-sm">
             We believe the role of Live Tech Support Admin is the perfect
@@ -19,8 +15,8 @@ export const HomepageHero = () => (
           </p>
         </div>
         <Button
+          href="form"
           className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms] mt-4"
-          href="/"
           variant="primary"
           size="large"
         >
@@ -30,7 +26,7 @@ export const HomepageHero = () => (
       <div className="md:w-1/2 mt-8 md:mt-0">
         <div className="border rounded-lg p-4 bg-white bg-opacity-10 text-white">
           <h3 className="text-lg font-bold mb-4">Requirements to Apply</h3>
-          <table className="w-full text-left">
+          <table className="w-full text-left text-md">
             <tbody>
               <tr>
                 <td className="py-2 border-b border-gray-200">
@@ -58,7 +54,9 @@ export const HomepageHero = () => (
               </tr>
               <tr>
                 <td className="py-2">Darwin</td>
-                <td className="py-2">DARWIN DARWIN DARWIN</td>
+                <td className="py-2">
+                  DARWIN DARWIN DARWIN DARWIN DARWIN DARWIN
+                </td>
               </tr>
             </tbody>
           </table>

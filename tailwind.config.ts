@@ -30,6 +30,9 @@ module.exports = {
       "grey-dark": "#262626",
       "primary-text": "#f7f8f8",
     },
+    padding: {
+      default: "15px",
+    },
     spacing: {
       0: "0",
       1: "0.4rem",
