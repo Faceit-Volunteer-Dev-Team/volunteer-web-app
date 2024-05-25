@@ -22,7 +22,6 @@ const Form = () => {
   const { questions } = Quiz;
   const { question, answers, correctAnswer } = questions[activeQuestion];
 
-  // Select and check answer
   const onAnswerSelected = (answer: string, idx: number) => {
     setChecked(true);
     setSelectedAnswerIndex(idx);
@@ -35,7 +34,6 @@ const Form = () => {
     }
   };
 
-  // Calculate score and increment to next question
   const nextQuestion = () => {
     setSelectedAnswerIndex(null);
     setResult((prev) =>
