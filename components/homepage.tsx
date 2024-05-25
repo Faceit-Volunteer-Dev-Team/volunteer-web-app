@@ -20,7 +20,7 @@ export const HomepageHero = () => (
           variant="primary"
           size="large"
         >
-          <span className="text-white">Apply Now!</span>
+          <span className="text-orange">Apply Now!</span>
         </Button>
       </div>
       <div className="md:w-1/2 mt-8 md:mt-0">
