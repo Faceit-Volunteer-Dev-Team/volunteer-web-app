@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "./shared/button";
 import { Hero } from "./shared/hero";
 
@@ -14,14 +15,15 @@ export const HomepageHero = () => (
             full-time staff and become a familiar cog within the FACEIT machine.
           </p>
         </div>
-        <Button
-          href="form"
-          className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms] mt-4"
-          variant="primary"
-          size="large"
-        >
-          <span className="text-orange">Apply Now!</span>
-        </Button>
+        <Link href="/form">
+          <Button
+            className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms] mt-4"
+            variant="primary"
+            size="large"
+          >
+            <span className="text-orange">Apply Now</span>
+          </Button>
+        </Link>
       </div>
       <div className="md:w-1/2 mt-8 md:mt-0">
         <div className="border rounded-lg p-4 bg-white bg-opacity-10 text-white">
