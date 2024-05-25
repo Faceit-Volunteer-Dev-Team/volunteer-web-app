@@ -57,7 +57,7 @@ export const Header = () => {
               )}
             >
               <li>
-                <Link href="#">Requirements</Link>
+                <Link href="#">Resources</Link>
               </li>
               <li>
                 <Link href="form">Application Form</Link>
