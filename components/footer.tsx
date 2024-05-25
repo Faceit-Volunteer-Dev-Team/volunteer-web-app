@@ -34,11 +34,11 @@ export const Footer = () => (
     <Container className="flex flex-col justify-between lg:flex-row">
       <div>
         <div className="flex h-full flex-row justify-between lg:flex-col">
-          <div className="flex items-center text-grey">
+          <div className="flex items-center ">
             <Logo className="mr-4 h-4 w-4" /> ©️VolunteerTeam 2024-All rights
             reserved.
           </div>
-          <div className="mt-auto flex space-x-4 text-grey"></div>
+          <div className="mt-auto flex space-x-4 "></div>
         </div>
       </div>
       <div className="flex flex-wrap">

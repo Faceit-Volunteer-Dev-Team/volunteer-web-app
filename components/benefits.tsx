@@ -14,9 +14,9 @@ type BenefitProps = {
 
 const Benefit = ({ icon, title, description }: BenefitProps) => {
   return (
-    <div className="mt-5 rounded-md border-2 border-gray-100 px-5 py-16 text-center text-white font-manrope">
-      <div className="mb-4 flex justify-center">
-        <div className="rounded-full border-2 border-gray-100 bg-primary-100 p-4">
+    <div className="mt-5 rounded-md border-2 border-grey px-5 py-16 text-center text-white ">
+      <div className="mb-4 flex justify-center bg-grey">
+        <div className="rounded-full border-2 border-grey bg-grey p-4">
           {icon}
         </div>
       </div>
@@ -55,7 +55,7 @@ function Benefits() {
         {/* HEADER */}
         <div className="md:my-5 md:w-3/5">
           <HText>More than just a volunteer.</HText>
-          <p className="my-5 text-sm text-white font-manrope">
+          <p className="my-5 text-sm text-white font-play">
             We provide world class training,
           </p>
         </div>
@@ -83,13 +83,13 @@ function Benefits() {
               <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] before:content-abstractwaves">
                 <HText>
                   MILLIONS OF CUSTOMERS{" "}
-                  <span className="text-primary-500">HAPPY</span>
+                  <span className="text-primary-500 text-orange">HAPPY</span>
                 </HText>
               </div>
             </div>
 
             {/* DESCRIPTION */}
-            <p className="my-5 text-white font-manrope">
+            <p className="my-5 text-white ">
               Getting assistance on their live matches, a professional volunteer
               team We care about each and every member.
             </p>

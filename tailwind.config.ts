@@ -21,11 +21,12 @@ module.exports = {
     },
     colors: {
       transparent: "transparent",
+      orange: "#FF5500",
       white: "#fff",
       "off-white": "#f7f8f8",
       "transparent-white": "rgba(255, 255, 255, 0.08)",
       background: "#0A0C0C",
-      grey: "#858699",
+      grey: "#141616",
       "grey-dark": "#262626",
       "primary-text": "#f7f8f8",
     },
