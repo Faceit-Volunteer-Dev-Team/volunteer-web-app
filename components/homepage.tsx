@@ -37,11 +37,9 @@ export const HomepageHero = () => (
                 </td>
               </tr>
               <tr>
+                <td className="py-2 border-b border-gray-200">Good english</td>
                 <td className="py-2 border-b border-gray-200">
-                  Good english speaken/written
-                </td>
-                <td className="py-2 border-b border-gray-200">
-                  Have a good understanding of english{" "}
+                  Have a good understanding of english
                 </td>
               </tr>
               <tr>
