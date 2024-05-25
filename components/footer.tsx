@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { Container } from "./shared/container";
 
-import { Logo } from "./icons/logo";
-
 const footerLinks = [
   {
     title: "Resources",
@@ -35,8 +33,12 @@ export const Footer = () => (
       <div>
         <div className="flex h-full flex-row justify-between lg:flex-col">
           <div className="flex items-center ">
-            <Logo className="mr-4 h-4 w-4" /> ©️VolunteerTeam 2024-All rights
-            reserved.
+            <img
+              src="/pintech.png"
+              alt="Pintech Logo"
+              className="mr-4 h-4 w-4"
+            />
+            ©️VolunteerTeam 2024-All rights reserved.
           </div>
           <div className="mt-auto flex space-x-4 "></div>
         </div>

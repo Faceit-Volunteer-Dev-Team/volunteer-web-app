@@ -1,10 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "./shared/button";
 import { Container } from "./shared/container";
 import { Logo } from "./icons/logo";
-import classNames from "classnames";
 
 export const Header = () => {
   return (

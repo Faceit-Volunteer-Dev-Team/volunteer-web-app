@@ -2,7 +2,6 @@ import React from "react";
 
 import HText from "./shared/HText";
 import { Button } from "./shared/button";
-import admin from "../assets/admin.png"; // Ensure you have this path correct
 
 import { RiHomeOfficeFill, RiGroup2Fill, RiBookOpenLine } from "react-icons/ri";
 

@@ -6,7 +6,7 @@ export const HomepageHero = () => (
     <div className="relative flex flex-col md:flex-row md:justify-between md:items-start">
       <div className="md:w-1/2">
         <div>
-          <p className="mt-8 text-sm">
+          <p className="mt-8 text-sm ">
             We believe the role of Live Tech Support Admin is the perfect
             opportunity for people looking to get their first foot in the door
             of their future esports career. Despite being a volunteer position,

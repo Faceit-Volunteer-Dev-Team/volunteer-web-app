@@ -1,8 +1,6 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import Benefits from "@/components/benefits";
 
 export default function RootLayout({
   children,
@@ -23,7 +21,6 @@ export default function RootLayout({
           <main className="flex items-center justify-center bg-page-gradient pt-navigation-height">
             {children}
           </main>
-          <Benefits />
           <Footer />
         </div>
       </body>
