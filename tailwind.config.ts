@@ -3,7 +3,7 @@ module.exports = {
   content: ["./components/**/*.{js,ts,jsx,tsx}", "./app/**/*.{ts,tsx}"],
   theme: {
     fontFamily: {
-      sans: '"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue",sans-serif',
+      sans: ['"Play"', "sans-serif"], // Set the default font to Play
     },
     fontSize: {
       xs: "1.3rem",
@@ -24,7 +24,7 @@ module.exports = {
       white: "#fff",
       "off-white": "#f7f8f8",
       "transparent-white": "rgba(255, 255, 255, 0.08)",
-      background: "#0f2862",
+      background: "#0A0C0C",
       grey: "#858699",
       "grey-dark": "#262626",
       "primary-text": "#f7f8f8",
