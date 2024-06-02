@@ -50,22 +50,11 @@ module.exports = {
       16: "6.4rem",
       "navigation-height": "var(--navigation-height)",
     },
-    backgroundImage: {
-      "primary-gradient":
-        "linear-gradient(92.88deg, #757575 9.16%, #B0C4DE 43.89%, #708090 64.72%)",
-      "page-gradient":
-        "radial-gradient(ellipse 80% 50% at 50% -20%,rgba(112, 128, 144, 0.3), transparent)",
-    },
 
     transitionDelay: {
       0: "0ms",
     },
-    keyframes: {
-      "fade-in": {
-        from: { opacity: 0, transform: "translateY(-10px)" },
-        to: { opacity: 1, transform: "none" },
-      },
-    },
+
     animation: {
       "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
     },

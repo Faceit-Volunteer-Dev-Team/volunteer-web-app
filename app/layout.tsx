@@ -18,7 +18,7 @@ export default function RootLayout({
       <body>
         <div>
           <Header />
-          <main className="flex items-center justify-center bg-page-gradient pt-navigation-height">
+          <main className="flex items-center justify-center  pt-navigation-height">
             {children}
           </main>
           <Footer />

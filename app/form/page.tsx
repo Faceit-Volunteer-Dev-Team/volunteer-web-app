@@ -2,110 +2,97 @@
 
 import React, { useState } from "react";
 
-export const revalidate = 10;
-
-interface ApiResponse {
-  message: string;
-}
 
 export default function Form() {
-  const [state, setState] = useState<ApiResponse | null>(null);
-
-  const FormAction = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    const formData = new FormData(event.currentTarget);
-
-    const res = await fetch("http://localhost:3000/api", {
-      method: "POST",
-      body: formData,
-    });
-    const data = (await res.json()) as ApiResponse;
-    setState(data);
-  };
-
   return (
     <div className="bg-black text-orange min-h-screen flex items-center justify-center">
-      <form
-        onSubmit={FormAction}
-        className="max-w-lg w-full mx-auto bg-gray-800 p-8 rounded-lg"
-      >
-        {state && <div className="text-md text-orange">{state.message}</div>}
-        <h2 className="text-3xl mb-6 text-center">Application Form</h2>
-        <div className="grid grid-cols-1 gap-4">
-          <div>
-            <label htmlFor="name" className="block mb-2 text-sm">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="block mb-2 text-sm">
+      <form className="w-full max-w-lg">
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full px-3">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="grid-email"
+            >
               Email
             </label>
             <input
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              id="grid-email"
               type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
+              placeholder="example@example.com"
               required
             />
+            <p className="text-gray-600 text-xs italic">
+              Please enter a valid email address.
+            </p>
           </div>
-          <div>
-            <label htmlFor="steam-profile" className="block mb-2 text-sm">
-              Steam Profile
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="grid-first-name"
+            >
+              Name
             </label>
             <input
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              id="grid-first-name"
               type="text"
-              id="steam-profile"
-              name="steam-profile"
-              placeholder="Enter your Steam profile URL"
-              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
+              placeholder="Jane"
+              required
+            />
+            <p className="text-red-500 text-xs italic">
+              Please fill out this field.
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 px-3">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="grid-last-name"
+            >
+              Discord Id
+            </label>
+            <input
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="grid-last-name"
+              type="text"
+              placeholder="Doe"
               required
             />
           </div>
-          <div>
-            <label htmlFor="region" className="block mb-2 text-sm">
+        </div>
+
+        <div className="flex flex-wrap -mx-3 mb-2">
+          <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="grid-state"
+            >
               Region
             </label>
-            <input
-              type="text"
-              id="region"
-              name="region"
-              placeholder="Enter your region"
-              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
-              required
-            />
+            <div className="relative">
+              <select
+                className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-state"
+                required
+              >
+                <option>Europe</option>
+                <option>Oceania</option>
+                <option>Vaticano</option>
+                <option>North America</option>
+                <option>South America</option>
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <svg
+                  className="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </div>
+            </div>
           </div>
-          <div>
-            <label htmlFor="discordid" className="block mb-2 text-sm">
-              Discord ID
-            </label>
-            <input
-              type="text"
-              id="discordid"
-              name="discordid"
-              placeholder="Enter your Discord ID"
-              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
-              required
-            />
-          </div>
-          <div className="text-center mt-6">
-            <button
-              type="submit"
-              className="px-6 py-2 bg-orange-500 text-black font-semibold rounded hover:bg-orange-600 transition-colors"
-            >
-              Submit
-            </button>
-          </div>
+          <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0"></div>
         </div>
       </form>
     </div>

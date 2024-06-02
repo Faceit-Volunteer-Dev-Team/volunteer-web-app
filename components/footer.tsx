@@ -18,17 +18,11 @@ const footerLinks = [
       { title: "Terms of service", href: "#" },
     ],
   },
-  {
-    title: "Status",
-    links: [
-      { title: "API", href: "#" },
-      { title: "Status", href: "#" },
-    ],
-  },
+
 ];
 
 export const Footer = () => (
-  <footer className="mt-12 border-t border-transparent-white py-[5.6rem] text-sm">
+  <footer className="mt-12 border-t border-transparent-white py-[5.6rem] text-sm text-white">
     <Container className="flex flex-col justify-between lg:flex-row">
       <div>
         <div className="flex h-full flex-row justify-between lg:flex-col">
@@ -38,7 +32,7 @@ export const Footer = () => (
               alt="Pintech Logo"
               className="mr-4 h-4 w-4"
             />
-            ©️VolunteerTeam 2024-All rights reserved.
+            Copyright © 2024 FACEIT Volunteers
           </div>
           <div className="mt-auto flex space-x-4 "></div>
         </div>
