@@ -7,7 +7,6 @@ const footerLinks = [
     links: [
       { title: "Discord", href: "#" },
       { title: "Clans", href: "#" },
-      { title: "Discord", href: "#" },
     ],
   },
   {
@@ -18,7 +17,6 @@ const footerLinks = [
       { title: "Terms of service", href: "#" },
     ],
   },
-
 ];
 
 export const Footer = () => (
