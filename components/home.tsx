@@ -6,46 +6,11 @@ import HText from "./shared/HText";
 import { Tools } from "./tools";
 import Image from "next/image";
 
-type BenefitProps = {
-  icon: JSX.Element;
-  title: string;
-  description: string;
-};
 
-const Benefit: React.FC<BenefitProps> = ({ icon, title, description }) => {
-  return (
-    <div className="mt-5 rounded-md border-2 border-grey px-5 py-16 text-center text-white ">
-      <div className="mb-4 flex justify-center bg-grey">
-        <div className="rounded-full border-2 border-grey bg-grey p-4">
-          {icon}
-        </div>
-      </div>
-      <h4 className="font-bold">{title}</h4>
-      <p className="my-3">{description}</p>
-    </div>
-  );
-};
 
-const benefits: Array<BenefitProps> = [
-  {
-    icon: <RiHomeOfficeFill className="h-6 w-6" />,
-    title: "Volunteer Admin Team",
-    description:
-      "Get professional advice from experienced individuals in the esports industry, helping you grow and develop your skills.",
-  },
-  {
-    icon: <RiGroup2Fill className="h-6 w-6" />,
-    title: "100's of Diverse Classes",
-    description:
-      "Get professional advice from experienced individuals in the esports industry, helping you grow and develop your skills.",
-  },
-  {
-    icon: <RiBookOpenLine className="h-6 w-6" />,
-    title: "Expert and Pro Trainers",
-    description:
-      "Kickstart your career in esports with our comprehensive support and opportunities to work in tournament operations.",
-  },
-];
+
+
+
 
 const Homep: React.FC = () => {
   return (
@@ -80,8 +45,8 @@ const Homep: React.FC = () => {
               <Image
                 alt="premiumlogo"
                 src="/prem.png"
-                height={300}
-                width={300}
+                height={150}
+                width={150}
               ></Image>
 
               <ul className="list-disc list-inside  text-xl font-semibold  p-5">
@@ -100,8 +65,8 @@ const Homep: React.FC = () => {
               <Image
                 src="/req.png"
                 alt="requlogo"
-                width={300}
-                height={300}
+                width={150}
+                height={150}
               ></Image>
 
               <ul className="list-disc text-xl list-inside font-semibold p-5">
@@ -111,7 +76,7 @@ const Homep: React.FC = () => {
                 <li>Dislike DARWIN</li>
                 <li>Donate elo</li>
               </ul>
-              <p>
+              <p className="text-orange ">
                 We require volunteers to contribute a minimum of four hours of
                 their precious time per week towards helping live customer
                 issues with technical support.
@@ -129,16 +94,7 @@ const Homep: React.FC = () => {
               We provide world class training,
             </p>
           </div>
-          <div className="mt-5 items-center text-sm justify-between gap-8 md:flex">
-            {benefits.map((benefit) => (
-              <Benefit
-                key={benefit.title}
-                icon={benefit.icon}
-                title={benefit.title}
-                description={benefit.description}
-              />
-            ))}
-          </div>
+
           <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
             <div>
               <div className="relative">
