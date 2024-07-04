@@ -4,6 +4,7 @@ import { Button } from "./shared/button";
 import { RiHomeOfficeFill, RiGroup2Fill, RiBookOpenLine } from "react-icons/ri";
 import HText from "./shared/HText";
 import { Tools } from "./tools";
+import Image from "next/image";
 
 type BenefitProps = {
   icon: JSX.Element;
@@ -60,11 +61,13 @@ const Homep: React.FC = () => {
         </div>
         <div className="w-1/2">
           <div className="bg-gradient-to-r from-orange to-grey rounded-full   ti-border-right p-5">
-            <img
-              src="darwin.png"
-              alt="Admin Illustration"
-              className="max-w-full h-auto"
-            />
+            <Image
+              alt="Darwinlogo"
+              className="max-w-full h-auto w-auto"
+              src="/darwin.png"
+              height={500}
+              width={500}
+            ></Image>
           </div>
         </div>
       </section>
@@ -74,11 +77,13 @@ const Homep: React.FC = () => {
           <div className="max-w-md mb-10 md:mb-0">
             <h2 className="text-3xl font-bold mb-5">Benefits</h2>
             <div className="">
-              <img
+              <Image
+                alt="premiumlogo"
                 src="/prem.png"
-                alt="Premium Icon"
-                className="w-20 h-20 mb-5 "
-              />
+                height={300}
+                width={300}
+              ></Image>
+
               <ul className="list-disc list-inside  text-xl font-semibold  p-5">
                 <li>Get premium </li>
                 <li>FP for helping</li>
