@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "./shared/button";
-import { RiHomeOfficeFill, RiGroup2Fill, RiBookOpenLine } from "react-icons/ri";
 import HText from "./shared/HText";
 import { Tools } from "./tools";
 import Image from "next/image";
