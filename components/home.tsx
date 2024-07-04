@@ -97,11 +97,13 @@ const Homep: React.FC = () => {
           <div className="max-w-md">
             <h2 className="text-3xl font-bold mb-5">Requirements</h2>
             <div className=" p-5 rounded-md">
-              <img
+              <Image
                 src="/req.png"
-                alt="Requirements Icon"
-                className="w-20 h-20 mb-5 mx-auto"
-              />
+                alt="requlogo"
+                width={300}
+                height={300}
+              ></Image>
+
               <ul className="list-disc text-xl list-inside font-semibold p-5">
                 <li>No Bans</li>
                 <li>Good english level</li>
