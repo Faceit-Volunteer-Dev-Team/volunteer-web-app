@@ -22,7 +22,7 @@ export default function ApplicationForm() {
       <div className="max-w-2xl mx-auto rounded-lg">
         <div className="flex flex-col items-center justify-center text-center py-10">
           <div>
-            <a href="http://faceit.com">
+            <a target="_blank" href="http://faceit.com">
               <Image
                 src="/pintech.png"
                 alt="Adminlogo"
