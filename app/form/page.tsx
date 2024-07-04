@@ -14,7 +14,6 @@ export default function ApplicationForm() {
 
   const onSubmit = (formData: any) => {
     setData(JSON.stringify(formData));
-    // Here you can add logic to handle form submission, e.g., sending data to the server
   };
 
   return (

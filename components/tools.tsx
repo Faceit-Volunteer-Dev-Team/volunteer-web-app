@@ -13,9 +13,9 @@ export const Tools = () => (
       <Image
         src="/match.png"
         alt="matchcontrol"
-        className="absolute mx-auto my-auto w-1/3 inset-0"
-        width={1920}
-        height={1920}
+        className="absolute mx-auto my-auto  inset-0"
+        width={400}
+        height={400}
       ></Image>
     </div>
   </div>
