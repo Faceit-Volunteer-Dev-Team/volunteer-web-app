@@ -83,7 +83,7 @@ const Step1 = () => {
         </div>
         <div className="space-y-2">
           <label>
-            Region <span className="text-white">*</span>
+            Region <span className="text-grey">*</span>
           </label>
           <div className="flex flex-wrap gap-5 mt-2">
             <div className="relative w-full md:w-1/3">
@@ -259,15 +259,25 @@ const Step3 = () => {
           <select
             id="games"
             {...register("games", { required: true })}
-            className={`w-full p-2.5 bg-opacity-10 bg-white border border-opacity-15 border-solid border-white rounded-md focus:outline-none ${
+            className={`w-full p-2.5 bg-opacity-10 bg-white border border-opacity-15   border-solid border-white rounded-md focus:outline-none ${
               errors.games ? "border-red" : ""
             }`}
           >
-            <option value="">Select...</option>
-            <option value="cs2">CS2</option>
-            <option value="dota">Dota</option>
-            <option value="league">League</option>
-            <option value="brawlstars">Brawl Stars</option>
+            <option className=" text-grey" value="">
+              Select...
+            </option>
+            <option className=" text-grey" value="cs2">
+              CS2
+            </option>
+            <option className=" text-grey" value="dota">
+              Dota
+            </option>
+            <option className=" text-grey" value="league">
+              League
+            </option>
+            <option className=" text-grey" value="brawlstars">
+              Brawl Stars
+            </option>
           </select>
           {errors.games && (
             <span className="text-red">Please select a game</span>
@@ -284,11 +294,21 @@ const Step3 = () => {
               errors.frequency ? "border-red" : ""
             }`}
           >
-            <option value="">Select...</option>
-            <option value="rarely">Rarely</option>
-            <option value="sometimes">Sometimes</option>
-            <option value="never">Never</option>
-            <option value="regularly">Regularly</option>
+            <option className=" text-grey" value="">
+              Select...
+            </option>
+            <option className=" text-grey" value="rarely">
+              Rarely
+            </option>
+            <option className=" text-grey" value="sometimes">
+              Sometimes
+            </option>
+            <option className=" text-grey" value="never">
+              Never
+            </option>
+            <option className=" text-grey" value="regularly">
+              Regularly
+            </option>
           </select>
           {errors.frequency && (
             <span className="text-red">Please select an option</span>
@@ -349,7 +369,7 @@ const Step4 = () => {
       </div>
       <div className="space-y-2">
         <label htmlFor="steamProfile">
-          Steam Profile <span className="text-white">*</span>
+          Steam Profile <span className="text-grey">*</span>
         </label>
         <input
           type="text"
@@ -458,9 +478,7 @@ export default function ApplicationForm() {
     setStep((prevStep) => prevStep + 1);
   };
 
-  const prevStep = () => {
-    setStep((prevStep) => prevStep - 1);
-  };
+
 
   return (
     <div className="bg-black font-play text-base font-normal text-white py-3">

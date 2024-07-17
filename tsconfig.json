@@ -22,9 +22,8 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"],
+      "auth": ["./auth.ts"]
     },
     "forceConsistentCasingInFileNames": true
   },

@@ -1,6 +1,7 @@
 import "./globals.css";
-import { Header } from "@/components/header";
+import Header from "../components/header";
 import { Footer } from "@/components/footer";
+import Providers from "./providers";
 
 export default function RootLayout({
   children,
@@ -9,20 +10,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="viewport"
-          content="width=device-width, height=device-height, initial-scale=1"
-        />
-      </head>
       <body>
-        <div>
+        <Providers>
           <Header />
-          <main className="flex items-center justify-center  pt-navigation-height">
-            {children}
-          </main>
-          <Footer />
-        </div>
+          {children}
+        </Providers>
+        <Footer />
       </body>
     </html>
   );
