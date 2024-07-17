@@ -23,7 +23,13 @@ const credentialsConfig = CredentialsProvider({
   },
 });
 const config = {
-  providers: [Faceit, credentialsConfig],
+  providers: [
+    Faceit({
+      clientId: process.env.FACEIT_CLIENT_ID,
+      clientSecret: process.env.FACEIT_CLIENT_SECRET,
+    }),
+    credentialsConfig,
+  ],
   callbacks: {
     authorized({ request, auth }) {
       const { pathname } = request.nextUrl;
@@ -31,6 +37,7 @@ const config = {
       return true;
     },
   },
+  secret: process.env.AUTH_SECRET,
 } satisfies NextAuthConfig;
 
 export const { handlers, auth, signIn, signOut } = NextAuth(config);
