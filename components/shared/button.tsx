@@ -5,6 +5,7 @@ import classNames from "classnames";
 
 type ButtonBaseProps = VariantProps<typeof buttonClasses> & {
   children: React.ReactNode;
+  onClick?: () => void; //
 };
 
 interface ButtonAsAnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -57,7 +58,13 @@ export const Highlight = ({
   className?: string;
 }) => <span className={classNames("highlight", className)}>{children}</span>;
 
-export const Button = ({ children, variant, size, ...props }: ButtonProps) => {
+export const Button = ({
+  children,
+  variant,
+  size,
+  onClick,
+  ...props
+}: ButtonProps) => {
   const classes = buttonClasses({ variant, size, className: props.className });
 
   if ("href" in props && props.href !== undefined) {
@@ -69,7 +76,7 @@ export const Button = ({ children, variant, size, ...props }: ButtonProps) => {
   }
 
   return (
-    <button {...props} className={classes}>
+    <button {...props} onClick={onClick} className={classes}>
       {children}
     </button>
   );

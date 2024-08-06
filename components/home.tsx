@@ -1,17 +1,17 @@
 import React from "react";
-import Link from "next/link";
-import { Button } from "./shared/button";
+
 import HText from "./shared/HText";
 import { Tools } from "./tools";
 import Image from "next/image";
+import { redirect } from "next/navigation";
+import { getSession } from "../app/lib/getSession";
+import JoinNowButton from "./JoinNowButton";
 
+const Homep = async () => {
+  const session = await getSession();
+  const user = session?.user;
+  if (user) redirect("/form");
 
-
-
-
-
-
-const Homep: React.FC = () => {
   return (
     <div className="font-play text-white bg-gray-900 p-4">
       <section className="flex justify-between items-center mt-10">
@@ -109,9 +109,7 @@ const Homep: React.FC = () => {
                 volunteer team!
               </p>
               <div className="relative mt-16">
-                <Link href="/form">
-                  <Button>Join Now</Button>
-                </Link>
+                <JoinNowButton />
               </div>
             </div>
           </div>
